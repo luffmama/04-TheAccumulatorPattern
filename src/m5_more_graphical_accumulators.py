@@ -338,11 +338,11 @@ def draw_lines_from_rectangles(rectangle1, rectangle2, n, window):
                         rg.Point(line2.end.x - k*rectangle1.get_width()/2,
                                  line2.end.y + k*rectangle1.get_height()/2))
         line3.thickness = 5
-        for i in range(n-1):
-            if (n-1) % 2 == 0:
-                line3.color = rectangle1.outline_color
-            else:
-                line3.color = rectangle2.outline_color
+        #for i in range(n):
+        if (n) % 2 == 0:
+            line3.color = rectangle1.outline_color
+        else:
+            line3.color = rectangle2.outline_color
         line3.attach_to(window)
     rectangle1.attach_to(window)
     rectangle2.attach_to(window)
